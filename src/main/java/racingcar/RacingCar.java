@@ -3,18 +3,16 @@ package racingcar;
 import com.google.common.annotations.VisibleForTesting;
 
 public class RacingCar implements Comparable<RacingCar>{
-    private final RacingCarCondition racingCarCondition;
     private final RacingCarName racingCarName;
     private final Mileage mileage;
 
     public RacingCar(RacingCarName racingCarName) {
         this.racingCarName = racingCarName;
-        this.racingCarCondition = new RacingCarCondition();
         this.mileage = new Mileage();
     }
 
     public void move() {
-        if (canMove()) {
+        if (isTrackConditionOk()) {
             mileage.increase();
         }
     }
@@ -28,8 +26,8 @@ public class RacingCar implements Comparable<RacingCar>{
     }
 
     @VisibleForTesting
-    boolean canMove() {
-        return racingCarCondition.canMove();
+    boolean isTrackConditionOk() {
+        return RandomTrackCondition.canMove();
     }
 
     @Override

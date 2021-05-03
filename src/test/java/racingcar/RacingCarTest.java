@@ -19,7 +19,7 @@ public class RacingCarTest {
     @CsvSource(value = {"true:1", "false:0"}, delimiter = ':')
     @DisplayName("전진하면 이동거리가 1 늘어나고, 멈춰있으면 이동거리가 늘어나지 않는다")
     public void test(boolean canMove, int mileage) {
-        when(racingCar.canMove()).thenReturn(canMove);
+        when(racingCar.isTrackConditionOk()).thenReturn(canMove);
 
         racingCar.move();
 
