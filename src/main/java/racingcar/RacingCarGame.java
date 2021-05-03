@@ -19,13 +19,11 @@ public class RacingCarGame {
 
     public void startRace() {
         while (!racingRound.isFinalRound()) {
+            racingRound.nextRound();
             racingCars.moveCars();
             ConsoleView.printRacingCars(racingCars);
-            racingRound.nextRound();
         }
-    }
 
-    public List<RacingCar> getWinners() {
-        return racingCars.getWinners();
+        ConsoleView.printWinners(racingCars.getWinners());
     }
 }
