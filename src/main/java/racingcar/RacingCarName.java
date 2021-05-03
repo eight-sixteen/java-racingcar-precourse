@@ -15,7 +15,7 @@ public class RacingCarName {
 
     public void validate(String name) {
         if (name == null || name.length() > 5) {
-            throw new IllegalArgumentException("RacingCarName length must be under 5");
+            throw new IllegalArgumentException("자동차 이름은 5자 이내여야 합니다");
         }
     }
 }
