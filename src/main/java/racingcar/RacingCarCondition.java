@@ -4,13 +4,13 @@ import com.google.common.annotations.VisibleForTesting;
 
 import java.util.Random;
 
-public class CarCondition {
+public class RacingCarCondition {
     private static final int RANDOM_NUMBER_BOUND = 10;
     private static final int MIN_MOVE_NUMBER = 4;
 
     private final Random random = new Random();
 
-    public boolean canGo() {
+    public boolean canMove() {
         return generateRandomNumber() >= MIN_MOVE_NUMBER;
     }
 
