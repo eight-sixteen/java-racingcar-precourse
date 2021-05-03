@@ -1,5 +1,8 @@
 package view;
 
+import racingcar.RacingCar;
+import racingcar.RacingCars;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -19,5 +22,13 @@ public class ConsoleView {
 
     public static void printErrorMessage(String errorMessage) {
         System.out.println(errorMessage);
+    }
+
+    public static void printRacingCars(RacingCars racingCars) {
+        for (RacingCar racingCar : racingCars.getRacingCars()) {
+            System.out.println(racingCar);
+        }
+
+        System.out.println();
     }
 }

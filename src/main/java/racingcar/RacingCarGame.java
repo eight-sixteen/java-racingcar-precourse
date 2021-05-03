@@ -1,5 +1,7 @@
 package racingcar;
 
+import view.ConsoleView;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,6 +20,7 @@ public class RacingCarGame {
     public void startRace() {
         while (!racingRound.isFinalRound()) {
             racingCars.moveCars();
+            ConsoleView.printRacingCars(racingCars);
             racingRound.nextRound();
         }
     }

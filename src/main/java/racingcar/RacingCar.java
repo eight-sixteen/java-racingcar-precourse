@@ -36,4 +36,16 @@ public class RacingCar implements Comparable<RacingCar>{
     public int compareTo(RacingCar o) {
         return Integer.compare(this.getMileage(), o.getMileage());
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(racingCarName.getName()).append(" : ");
+
+        for (int i = 0; i < mileage.getMileage(); i++) {
+            stringBuilder.append("-");
+        }
+
+        return stringBuilder.toString();
+    }
 }
