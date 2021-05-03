@@ -6,6 +6,7 @@ import racingcar.RacingCars;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class ConsoleView {
     private static final Scanner scanner = new Scanner(System.in);
@@ -30,5 +31,13 @@ public class ConsoleView {
         }
 
         System.out.println();
+    }
+
+    public static void printWinners(List<RacingCar> winners) {
+        String winnerNames = winners.stream()
+                .map(RacingCar::getName)
+                .collect(Collectors.joining(","));
+
+        System.out.printf("최종 우승자는 %s입니다", winnerNames);
     }
 }

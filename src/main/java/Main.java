@@ -1,3 +1,4 @@
+import racingcar.RacingCar;
 import racingcar.RacingCarGame;
 import view.ConsoleView;
 
@@ -11,6 +12,9 @@ public class Main {
 
             RacingCarGame racingCarGame = new RacingCarGame(carNames, round);
             racingCarGame.startRace();
+
+            List<RacingCar> winners = racingCarGame.getWinners();
+            ConsoleView.printWinners(winners);
         } catch (IllegalArgumentException e) {
             ConsoleView.printErrorMessage(e.getMessage());
         }
