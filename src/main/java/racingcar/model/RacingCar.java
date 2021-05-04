@@ -1,6 +1,7 @@
-package racingcar;
+package racingcar.model;
 
 import com.google.common.annotations.VisibleForTesting;
+import racingcar.utils.RandomTrackCondition;
 
 public class RacingCar implements Comparable<RacingCar>{
     private final RacingCarName racingCarName;

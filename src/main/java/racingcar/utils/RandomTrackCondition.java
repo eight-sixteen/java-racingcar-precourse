@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.utils;
 
 import com.google.common.annotations.VisibleForTesting;
 

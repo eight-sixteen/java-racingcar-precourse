@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.model;
 
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.DisplayName;

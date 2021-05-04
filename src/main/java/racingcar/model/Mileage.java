@@ -1,7 +1,7 @@
-package racingcar;
+package racingcar.model;
 
 public class Mileage {
-    private int mileage = 0;
+    private int mileage;
 
     public int getMileage() {
         return mileage;

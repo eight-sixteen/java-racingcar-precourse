@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.model;
 
 public class RacingRound {
     private final int finalRound;
@@ -6,8 +6,6 @@ public class RacingRound {
 
     public RacingRound(int finalRound) {
         validate(finalRound);
-
-        this.round = 0;
         this.finalRound = finalRound;
     }
 

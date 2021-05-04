@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.model;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +13,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class RacingCarTest {
     @Spy
-    RacingCar racingCar;
+    RacingCar racingCar = new RacingCar(new RacingCarName("abc"));
 
     @ParameterizedTest
     @CsvSource(value = {"true:1", "false:0"}, delimiter = ':')

@@ -1,11 +1,10 @@
-package racingcar;
+package racingcar.model;
 
 public class RacingCarName {
     private final String name;
 
     public RacingCarName(String name) {
         validate(name);
-
         this.name = name;
     }
 
